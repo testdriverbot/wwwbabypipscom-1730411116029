@@ -1,0 +1,14 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Start Learning".
+    commands:
+      - command: hover-text
+        text: Start Learning
+        description: button to start learning
+        action: click
+  - prompt: >-
+      Assert that an educational section or page loads.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: educational content is visible
