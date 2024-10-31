@@ -1,0 +1,59 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Start Your Free Trial".
+    commands:
+      - command: scroll-until-text
+        text: Start Your Free Trial
+        direction: down
+  - prompt: Click on "Start Your Free Trial".
+    commands:
+      - command: hover-text
+        text: Start Your Free Trial
+        description: button to start free trial
+        action: click
+  - prompt: Assert that a trial sign-up form appears.
+    commands:
+      - command: assert
+        expect: the trial sign-up form with an email input field is visible
+  - prompt: Complete the form and any additional steps.
+    commands:
+      - command: hover-text
+        text: Business email
+        description: input field for business email
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Start trial
+        description: button to submit the form
+        action: click
+  - prompt: Complete the form and any additional steps.
+    commands:
+      - command: hover-text
+        text: Full name
+        description: input field for full name
+        action: click
+      - command: type
+        text: John Doe
+      - command: hover-text
+        text: Business email
+        description: input field for business email
+        action: click
+      - command: type
+        text: johndoe@example.com
+      - command: hover-text
+        text: Phone number
+        description: input field for phone number
+        action: click
+      - command: type
+        text: 1234567890
+      - command: hover-text
+        text: Job title
+        description: input field for job title
+        action: click
+      - command: type
+        text: Manager
+      - command: hover-text
+        text: Company name
+        description: input field for company name
+        action: click
