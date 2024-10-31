@@ -1,0 +1,24 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "TRADING" in the navigation.
+    commands:
+      - command: hover-text
+        text: TRADING
+        description: navigation link
+        action: click
+  - prompt: Assert that the trading section page loads successfully.
+    commands:
+      - command: assert
+        expect: Trading Insights and Market Analysis
+  - prompt: Interact with one of the elements like starting a demo trade.
+    commands:
+      - command: hover-text
+        text: TRADE TODAY
+        description: button to start a demo trade
+        action: click
+  - prompt: >-
+      Assert that the interaction is successful.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: Trade with the
