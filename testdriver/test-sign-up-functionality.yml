@@ -1,0 +1,20 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Sign Up".
+    commands:
+      - command: hover-text
+        text: Join
+        description: link in the header
+        action: click
+  - prompt: Click on "Sign Up".
+    commands:
+      - command: hover-text
+        text: Sign In
+        description: link in the header
+        action: click
+  - prompt: Click on "Sign Up".
+    commands:
+      - command: hover-text
+        text: Join
+        description: link in the header
+        action: click
