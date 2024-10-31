@@ -1,0 +1,51 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "TOOLS" in the navigation.
+    commands:
+      - command: hover-text
+        text: TOOLS
+        description: navigation link
+        action: click
+  - prompt: Assert that a variety of tools are displayed.
+    commands:
+      - command: assert
+        expect: a variety of tools are displayed
+  - prompt: Assert that a variety of tools are displayed.
+    commands:
+      - command: scroll-until-text
+        text: Forex Market Hours Tool
+        direction: down
+  - prompt: Choose a tool and interact with it.
+    commands:
+      - command: hover-text
+        text: Give it a try!
+        description: button to try the Currency Correlation tool
+        action: click
+  - prompt: >-
+      Assert that the tool functions as expected.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the Gain & Loss Percentage Calculator is functional
+  - prompt: >-
+      Assert that the tool functions as expected.  # Use the content of the file
+      from the environment
+    commands:
+      - command: hover-text
+        text: My start balance was...
+        description: input field for start balance
+        action: click
+      - command: type
+        text: 1000
+      - command: hover-text
+        text: Then I had a...
+        description: input field for gain or loss
+        action: click
+      - command: type
+        text: 200
+      - command: hover-text
+        text: Gain
+        description: button to calculate gain
+        action: click
+      - command: assert
+        expect: calculation result is displayed
